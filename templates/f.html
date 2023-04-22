@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Predictor</title>
+    <style>
+        body {
+background-image: url("background1.png");
+}
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        label{
+            text-align: center;
+            border-radius: 20px;
+            width: 20px;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 24px;
+    
+        }
+        input{text-align: center;
+            border-radius: 20px;
+            width: 20px;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            margin-top: 10px;
+            
+}
+        p{
+            font-size: 24px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        #butn{
+            border-radius: 30px;
+            width: 100px;
+            color: black;
+            background-color: rgb(209, 72, 72);
+            text-align: center;
+        }
+        div{
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lung Cancer Detection</h1>
+    <p>[ Yes [2]  No [1] ] [ Male [1]  Female [0] ]</p>
+    <form class="form" action="/predict" method="POST">
+    <input type="number" name="gender">
+    <label>GENDER [ Male [1]  Female [0] ]</label>
+    <input type="number" name="age">
+    <label>AGE</label>
+    <input type="number" name="smoking">
+    <label>SMOKING [ Yes [2]  No [1] ] </label><br />
+    <input type="number" name="yellow_fingers">
+    <label>YELLOW FINGERS [ Yes [2]  No [1] ]</label>
+    <input type="number" name="anxiety">
+    <label>ANXIETY [ Yes [2]  No [1] ]</label>
+    <input type="number" name="peer_pressure">
+    <label>PEER PRESSURE [ Yes [2]  No [1] ]</label><br />
+    <input type="number" name="chronic_disease">
+    <label>CHRONIC DISEASE [ Yes [2]  No [1] ]</label>
+    <input type="number" name="fatigue">
+    <label>FATIGUE [ Yes [2]  No [1] ]</label>
+    <input type="number" name="allergy">
+    <label>ALLERGY [ Yes [2]  No [1] ]</label><br />
+    <input type="number" name="wheezing">
+    <label>WHEEZING [ Yes [2]  No [1] ]</label>
+    <input type="number" name="alcohol">
+    <label>ALCOHOL CONSUMPTION [ Yes [2]  No [1] ]</label>
+    <input type="number" name="coughing">
+    <label>COUGHING [ Yes [2]  No [1] ]</label><br />
+    <input type="number" name="breath">
+    <label>SHORTNESS OF BREATH [ Yes [2]  No [1] ]</label>
+    <input type="number" name="swallowing">
+    <label>SWALLOWING DIFFUCULTY [ Yes [2]  No [1] ]</label>
+    <input type="number" name="chest_pain">
+    <label>CHEST PAIN [ Yes [2]  No [1] ]</label>
+    <div><input type="submit" value="predict" placeholder="Predict" id="butn"></div>
+   </form>
+</body>
+</html>
